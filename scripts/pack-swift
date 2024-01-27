@@ -1,4 +1,0 @@
-#!/bin/bash
-
-cd ../swift && npm run build-swift
-cd ../swift-playground && npm install "$(npm pack ../swift/packages/swift)"

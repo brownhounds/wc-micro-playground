@@ -1,6 +1,7 @@
 {
-  "extends": "@brownhounds/ts-config/index.json",
-  "include": [
-    "."
-  ]
+    "extends": "@brownhounds/ts-config/index.json",
+    "compilerOptions": {
+        "sourceMap": true,
+    },
+    "include": ["."],
 }

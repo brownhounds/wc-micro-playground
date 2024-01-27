@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ../wc-micro && npm run build-wc-micro
+cd ../wc-micro-playground && npm install "$(npm pack ../wc-micro/packages/wc-micro)"

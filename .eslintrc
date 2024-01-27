@@ -1,6 +1,13 @@
 {
     "root": true,
-    "extends": [
-        "@brownhounds/eslint-config"
+    "parser": "@typescript-eslint/parser",
+    "extends": ["@brownhounds/eslint-config"],
+    "overrides": [
+        {
+            "files": ["*.ts"],
+            "parserOptions": {
+                "project": ["./tsconfig.json"]
+            }
+        }
     ]
 }

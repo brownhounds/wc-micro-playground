@@ -1,3 +1,3 @@
 # Test Bench
 
-Repository set up to test swift micro framework.
+Repository set up to test wc-micro framework.

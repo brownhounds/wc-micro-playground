@@ -1,18 +1,22 @@
 {
-  "name": "@brownhounds/swift-playground",
-  "version": "0.1.0",
-  "license": "MIT",
-  "author": "brownhounds",
-  "type": "module",
-  "scripts": {
-    "dev": "vite --host",
-    "build": "tsc && vite build",
-    "pack-swift": "./scripts/pack-swift"
-  },
-  "devDependencies": {
-    "@brownhounds/eslint-config": "0.1.0",
-    "@brownhounds/ts-config": "0.1.0",
-    "typescript": "5.3.3",
-    "vite": "5.0.12"
-  }
+    "name": "@brownhounds/wc-micro-playground",
+    "version": "0.1.0",
+    "license": "MIT",
+    "author": "brownhounds",
+    "type": "module",
+    "scripts": {
+        "dev": "vite --host",
+        "build": "tsc && vite build",
+        "pack-micro": "./scripts/pack-micro",
+        "repack": "npm run pack-micro && npm run dev"
+    },
+    "devDependencies": {
+        "@brownhounds/eslint-config": "0.1.1",
+        "@brownhounds/ts-config": "0.1.0",
+        "typescript": "5.3.3",
+        "vite": "5.0.12"
+    },
+    "dependencies": {
+        "@brownhounds/wc-micro": "file:brownhounds-wc-micro-0.1.0.tgz"
+    }
 }
