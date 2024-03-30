@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ../uhtml && npm run build
+cd ../wc-micro-playground && npm install "$(npm pack ../uhtml)"

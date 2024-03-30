@@ -1,12 +1,13 @@
-import { Component, Template, html } from '@brownhounds/wc-micro';
-import { component } from '@brownhounds/wc-micro/decorators';
+import { Component, type Template, html } from '@brownhounds/wc-micro';
+import { component, state } from '@brownhounds/wc-micro/decorators';
 import { store } from './store';
 
 @component({ tag: 'test-two', signals: [store] })
 export class Test2 extends Component {
-    state = this.useState({
+    @state
+    state = {
         string: 'initial value',
-    });
+    };
 
     click = (): void => {
         this.state.string = (Math.random() + 1).toString(36).substring(7);
