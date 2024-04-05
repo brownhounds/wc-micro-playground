@@ -7,18 +7,24 @@ import './Test2';
 
 @component({ tag: 'main-app' })
 export class MainApp extends Component {
-    @state
+    @state()
     state = {
         color: 'red',
         size: 'big',
+        testing: false,
         proxy: {
             foo: 'ksdhfksfdh',
         },
     };
 
+    kashkjashdh = (): void => {
+        this.render();
+    };
+
     onClick = (): void => {
         this.state.color = (Math.random() + 1).toString(36).substring(7);
         store.value.name = (Math.random() + 1).toString(36).substring(7);
+        // console.log(this.state.testing);
     };
 
     // renderingCount = 0;
@@ -41,13 +47,9 @@ export class MainApp extends Component {
                 ><button style="margin-bottom: 15px" @click=${this.onClick}>
                     Change Props
                 </button>
+                <button @click=${this.kashkjashdh}>Render</button>
                 <div style="display: flex; column-gap: 20px;">
-                    <test-one
-                        .proxy="${proxy}"
-                        .color="${color}"
-                        .size="${size}"
-                        .onClick="${this.onClick}"
-                    />
+                    <test-one .onClick="${this.onClick}" />
                 </div>
             </div>
         `;

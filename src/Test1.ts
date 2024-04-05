@@ -1,3 +1,4 @@
+import type { RenderTargetType } from '@brownhounds/wc-micro';
 import { Component, html, type Template } from '@brownhounds/wc-micro';
 import { component, state } from '@brownhounds/wc-micro/decorators';
 import { ref } from '@brownhounds/wc-micro/utilities';
@@ -12,7 +13,7 @@ type Test1Prop = {
 
 @component({ tag: 'test-one', signals: [store] })
 export class Test1 extends Component<Test1Prop> {
-    @state
+    @state()
     state = {
         string: 'initial value',
     };
@@ -24,15 +25,21 @@ export class Test1 extends Component<Test1Prop> {
     };
 
     changeProp = (): void => {
-        this.props.proxy.foo = (Math.random() + 1).toString(36).substring(7);
-        this.state.string = (Math.random() + 1).toString(36).substring(7);
-        store.value.name = (Math.random() + 1).toString(36).substring(7);
+        this.props.onClick();
+        // this.props.proxy.foo = (Math.random() + 1).toString(36).substring(7);
+        // this.state.string = (Math.random() + 1).toString(36).substring(7);
+        // store.value.name = (Math.random() + 1).toString(36).substring(7);
     };
 
     renderingCount = 0;
 
-    onRender = (target?: string): void => {
-        console.log('test-one', target, this.renderingCount, performance.now());
+    onRender = (triggers?: RenderTargetType[]): void => {
+        console.log(
+            'test-one',
+            triggers,
+            this.renderingCount,
+            performance.now()
+        );
         this.renderingCount++;
     };
 
