@@ -1,4 +1,3 @@
-import type { RenderTargetType } from '@brownhounds/wc-micro';
 import { Component, html, type Template } from '@brownhounds/wc-micro';
 import { component, state } from '@brownhounds/wc-micro/decorators';
 import { ref } from '@brownhounds/wc-micro/utilities';
@@ -33,7 +32,7 @@ export class Test1 extends Component<Test1Prop> {
 
     renderingCount = 0;
 
-    onRender = (triggers?: RenderTargetType[]): void => {
+    onRender = (triggers?: string[]): void => {
         console.log(
             'test-one',
             triggers,
