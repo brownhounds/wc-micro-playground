@@ -1,7 +1,10 @@
 import { Component, html, type Template } from '@brownhounds/wc-micro';
 import { component, state } from '@brownhounds/wc-micro/decorators';
 import { ref } from '@brownhounds/wc-micro/utilities';
-import { store } from './store';
+import { store } from '../store';
+
+import css from './styles.scss?inline';
+import css2 from './styles2.scss?inline';
 
 type Test1Prop = {
     color: string;
@@ -10,7 +13,7 @@ type Test1Prop = {
     onClick: () => void;
 };
 
-@component({ tag: 'test-one', signals: [store] })
+@component({ tag: 'test-one', signals: [store], styles: [css, css2] })
 export class Test1 extends Component<Test1Prop> {
     @state()
     state = {
@@ -48,9 +51,10 @@ export class Test1 extends Component<Test1Prop> {
 
         return html`
             <div
+                class="testing"
                 style="border: 1px solid black; border-radius: 3px; padding: 10px; min-width: 150px"
             >
-                <p><strong>${string}</strong></p>
+                <p><strong class="text">${string}</strong></p>
                 <p><strong>${store.value.name}</strong></p>
                 <div>
                     <p>${size}</p>

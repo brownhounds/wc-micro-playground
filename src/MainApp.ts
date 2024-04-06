@@ -2,7 +2,7 @@ import { Component, type Template, html } from '@brownhounds/wc-micro';
 import { component, state } from '@brownhounds/wc-micro/decorators';
 import { store } from './store';
 
-import './Test1';
+import './testting/Test1';
 import './Test2';
 
 @component({ tag: 'main-app' })
@@ -23,6 +23,7 @@ export class MainApp extends Component {
 
     onClick = (): void => {
         this.state.color = (Math.random() + 1).toString(36).substring(7);
+        this.state.size = (Math.random() + 1).toString(36).substring(7);
         store.value.name = (Math.random() + 1).toString(36).substring(7);
         // console.log(this.state.testing);
     };
@@ -36,7 +37,7 @@ export class MainApp extends Component {
 
     template = (): Template => {
         const { name } = store.value;
-        const { color, size, proxy } = this.state;
+        const { proxy, color, size } = this.state;
 
         return html`
             <div
@@ -49,7 +50,21 @@ export class MainApp extends Component {
                 </button>
                 <button @click=${this.kashkjashdh}>Render</button>
                 <div style="display: flex; column-gap: 20px;">
-                    <test-one .onClick="${this.onClick}" />
+                    <test-one
+                        .onClick="${this.onClick}"
+                        .size=${size}
+                        .color=${color}
+                    />
+                    <test-one
+                        .onClick="${this.onClick}"
+                        .size=${size}
+                        .color=${color}
+                    />
+                    <test-one
+                        .onClick="${this.onClick}"
+                        .size=${size}
+                        .color=${color}
+                    />
                 </div>
             </div>
         `;
