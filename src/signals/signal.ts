@@ -1,8 +1,7 @@
 import { signal } from '@brownhounds/wc-micro/signal';
 
 export const store = signal({
-    name: 'Initial Name Goes Here',
-    else: 1223,
+    name: 'Signal Value',
 });
 
 (window as any).store = store.value;

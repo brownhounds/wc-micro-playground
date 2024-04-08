@@ -21,7 +21,7 @@
         "vite-plugin-restart": "0.4.0"
     },
     "dependencies": {
-        "@brownhounds/uhtml": "file:brownhounds-uhtml-0.1.0.tgz",
-        "@brownhounds/wc-micro": "file:brownhounds-wc-micro-0.1.0.tgz"
+        "@brownhounds/uhtml": "file:brownhounds-uhtml-0.2.0.tgz",
+        "@brownhounds/wc-micro": "file:brownhounds-wc-micro-0.2.0.tgz"
     }
 }
