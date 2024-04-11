@@ -18,15 +18,21 @@ export class Test1 extends Component<Test1Prop> {
         string: 'State Value',
     };
 
+    req?: number;
+
     run = (): void => {
         if (config.value.internalState) {
             this.state.string = (Math.random() + 1).toString(36).substring(7);
         }
-        requestAnimationFrame(this.run);
+        this.req = requestAnimationFrame(this.run);
     };
 
     onMount = (): void => {
         this.run();
+    };
+
+    onDispose = (): void => {
+        if (this.req) cancelAnimationFrame(this.req);
     };
 
     template = (): Template => {
