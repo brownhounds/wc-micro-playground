@@ -1,27 +1,28 @@
 {
-    "name": "@brownhounds/wc-micro-playground",
-    "version": "0.1.0",
-    "license": "MIT",
-    "author": "brownhounds",
-    "type": "module",
-    "scripts": {
-        "dev": "vite --host",
-        "build": "tsc && vite build",
-        "pack-micro": "./scripts/pack-micro",
-        "pack-uhtml": "./scripts/pack-uhtml"
-    },
-    "devDependencies": {
-        "@brownhounds/eslint-config": "0.1.4",
-        "@brownhounds/ts-config": "0.1.0",
-        "gulp": "5.0.0",
-        "gulp-shell": "0.8.0",
-        "sass": "^1.74.1",
-        "typescript": "5.4.3",
-        "vite": "5.2.7",
-        "vite-plugin-restart": "0.4.0"
-    },
-    "dependencies": {
-        "@brownhounds/uhtml": "file:brownhounds-uhtml-0.2.0.tgz",
-        "@brownhounds/wc-micro": "file:brownhounds-wc-micro-0.2.0.tgz"
-    }
+  "name": "@brownhounds/wc-micro-playground",
+  "version": "0.1.0",
+  "license": "MIT",
+  "author": "brownhounds",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc && vite build",
+    "pack-micro": "./scripts/pack-micro",
+    "pack-uhtml": "./scripts/pack-uhtml",
+    "pack-wc-micro-router": "./scripts/pack-wc-micro-router"
+  },
+  "devDependencies": {
+    "@brownhounds/eslint-config": "0.1.4",
+    "@brownhounds/ts-config": "0.1.0",
+    "gulp": "5.0.0",
+    "gulp-shell": "0.8.0",
+    "sass": "^1.74.1",
+    "typescript": "5.4.3",
+    "vite": "5.2.7",
+    "vite-plugin-restart": "0.4.0"
+  },
+  "dependencies": {
+    "@brownhounds/uhtml": "file:brownhounds-uhtml-0.2.0.tgz",
+    "@brownhounds/wc-micro": "file:brownhounds-wc-micro-0.2.0.tgz"
+  }
 }
