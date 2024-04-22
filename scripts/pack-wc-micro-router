@@ -2,4 +2,3 @@
 
 cd /home/brownhounds/dev/wc-micro && npm run build-wc-micro-router
 cd /home/brownhounds/dev/wc-micro-playground && npm install "$(npm pack ../wc-micro/packages/wc-micro-router)"
-

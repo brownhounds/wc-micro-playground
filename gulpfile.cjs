@@ -4,6 +4,7 @@ const shell = require('gulp-shell');
 const { task, parallel, watch, series } = gulp;
 
 task('pack-micro', shell.task('npm run pack-micro'));
+task('pack-router', shell.task('npm run pack-router'));
 task('start-dev', shell.task('npm run dev'));
 
 task('watch-micro', () =>
@@ -16,4 +17,14 @@ task('watch-micro', () =>
     )
 );
 
-task('default', parallel('start-dev', 'watch-micro'));
+task('watch-router', () =>
+    watch(
+        [
+            '../wc-micro/packages/wc-micro-router/**/*.ts',
+            '!../wc-micro/packages/wc-micro-router/dist/**/*',
+        ],
+        series('pack-router')
+    )
+);
+
+task('default', parallel('start-dev', 'watch-micro', 'watch-router'));
