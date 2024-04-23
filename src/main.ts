@@ -9,9 +9,9 @@ export const router = initRouter(
             component: (): Promise<any> => import('./components/Page1'),
         },
         {
-            path: '/pages/:pageId',
-            tag: 'page-one',
-            component: (): Promise<any> => import('./components/Page1'),
+            path: '/pages/:pageId/category/:categoryName',
+            tag: 'page-two',
+            component: (): Promise<any> => import('./components/Page2'),
         },
     ],
     {
@@ -19,7 +19,7 @@ export const router = initRouter(
     }
 );
 
-console.log(router);
+(window as any).router = router;
 
 initApp({
     entryPoint: () => import('./components/MainApp'),

@@ -4,11 +4,12 @@ import { component } from '@brownhounds/wc-micro/decorators';
 @component({ tag: 'page-one' })
 export class Page1 extends Component {
     template = (): Template => {
-        return html`<h1>Page 2</h1>
-            <button
-                navigate=${{ path: '/pages/:pageId', params: { pageId: 2 } }}
-            >
-                sadikhasid
-            </button>`;
+        return html`<h1>Page 1</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
+                nemo ea cupiditate natus adipisci quis quibusdam, fugit aut
+                vitae, dolorum similique officia explicabo sunt dolor odit!
+                Possimus rem odio enim!
+            </p>`;
     };
 }
