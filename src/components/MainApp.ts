@@ -28,6 +28,26 @@ export class MainApp extends Component {
                         Page 3
                     </button>
                 </li>
+                <li>
+                    <button
+                        @click=${(): void =>
+                            router.navigate(
+                                '/pages/123456/category/something/tag/123455'
+                            )}
+                    >
+                        Page Nested Route
+                    </button>
+                </li>
+                <li>
+                    <button
+                        @click=${(): void =>
+                            router.navigate(
+                                '/pages/123456/category/something/tag/123455/tag-name/aaron'
+                            )}
+                    >
+                        Page Doubly Nested Route
+                    </button>
+                </li>
             </ul>
             <ui-router></ui-router>
         `;

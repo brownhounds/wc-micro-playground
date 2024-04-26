@@ -20,6 +20,7 @@ export class Page2 extends Component {
                 consequuntur ea unde quaerat voluptates, quos explicabo libero
                 ratione ad. Quidem consectetur odit quibusdam cumque quis
                 asperiores laborum id.
-            </p>`;
+            </p>
+            <outlet-element id="tag-id-route" />`;
     };
 }
