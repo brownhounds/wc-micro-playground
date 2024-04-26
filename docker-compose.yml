@@ -1,15 +1,15 @@
-version: "3"
+version: '3'
 
 services:
-  static-server:
-    image: ghcr.io/brownhounds/go-static:latest
-    environment:
-      - PORT=8080
-      - IS_SPA=false
-      - SPA_ENTRYPOINT=index.html
-      - STATIC_FOLDER=/app
-      - PUBLIC_PATH=/
-    volumes:
-      - ./artifacts/brownhounds.dev:/app
-    ports:
-      - 8080:8080
+    static-server:
+        image: ghcr.io/brownhounds/go-static:latest
+        environment:
+            - PORT=8080
+            - IS_SPA=true
+            - SPA_ENTRYPOINT=index.html
+            - STATIC_FOLDER=/app
+            - PUBLIC_PATH=/
+        volumes:
+            - ./dist:/app
+        ports:
+            - 8080:8080

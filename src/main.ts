@@ -34,10 +34,12 @@ export const router = initRouter(
     ],
     {
         routerTag: 'ui-router',
+        notFound: {
+            tag: 'not-found',
+            component: () => import('./components/NotFound'),
+        },
     }
 );
-
-(window as any).router = router;
 
 initApp({
     entryPoint: () => import('./components/MainApp'),
