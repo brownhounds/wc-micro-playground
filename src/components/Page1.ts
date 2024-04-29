@@ -12,7 +12,6 @@ export class Page1 extends Component {
                 nemo ea cupiditate natus adipisci quis quibusdam, fugit aut
                 vitae, dolorum similique officia explicabo sunt dolor odit!
                 Possimus rem odio enim!
-            </p>
-            <page-two />`;
+            </p>`;
     };
 }

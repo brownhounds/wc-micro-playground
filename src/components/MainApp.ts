@@ -13,39 +13,15 @@ export class MainApp extends Component {
                     </button>
                 </li>
                 <li>
-                    <button
-                        @click=${(): void =>
-                            router.navigate('/pages/123456/category/what-ever')}
-                    >
+                    <button @click=${(): void => router.navigate('/page/123')}>
                         Page 2
                     </button>
                 </li>
                 <li>
                     <button
-                        @click=${(): void =>
-                            router.navigate('/pages/something/something')}
+                        @click=${(): void => router.navigate('/jkasdhjashdajd')}
                     >
                         Page 3
-                    </button>
-                </li>
-                <li>
-                    <button
-                        @click=${(): void =>
-                            router.navigate(
-                                '/pages/123456/category/something/tag/123455'
-                            )}
-                    >
-                        Page Nested Route
-                    </button>
-                </li>
-                <li>
-                    <button
-                        @click=${(): void =>
-                            router.navigate(
-                                '/pages/123456/category/something/tag/123455/tag-name/aaron'
-                            )}
-                    >
-                        Page Doubly Nested Route
                     </button>
                 </li>
             </ul>
